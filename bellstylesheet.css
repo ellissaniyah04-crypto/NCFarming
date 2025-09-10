@@ -1,0 +1,111 @@
+html {
+     background-color: #3b3502;
+     margin: 29px
+    }
+
+h1 {
+   font-family: 'Handlee', sans-serif;
+   text-align: center; 
+   letter-spacing: 8px;
+   font-size: 50px;
+   color: #433704
+   }
+
+@keyframes cowp {
+    from {left: 310px}
+    to {right: 310px}
+}
+
+#cowp {
+  width: 80px;
+  height: 40px;
+  position: relative;
+  animation-name: cowp;
+  animation-duration: 7s;
+  animation-iteration-count: 2;
+  animation-direction: alternate;
+}
+
+body {
+     font-family: 'Handlee', sans-serif;
+     text-align: center; 
+     border: 5px groove #433704;
+     border-radius: 5px;
+     font-size: 18px;
+     background-color: white;
+     }
+
+a {
+transition: color 1s;
+}
+
+a:hover { 
+color: red
+}
+
+h2 {
+   font-size: 30px;
+   letter-spacing: 8px;
+   color: #433704
+   }
+
+footer {
+      font-size: 10px;
+      font-style: italic;
+      }
+
+/* Navbar container */
+.navbar {
+  overflow: hidden;
+  background-color: #433704;
+  font-family: 'Handlee', sans-serif;
+  text-align: center;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 18px 20px;
+  text-decoration: none;
+  resize: both;
+  overflow: auto;
+}
+
+ button {
+  background-color: #433704;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition: width 2s;
+} 
+
+
+ button:hover {
+ width: 300px;
+ color: red;
+}
+
+input[type=text] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 3px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+input[type=text]:focus {
+  border: 3px solid #555;
+}
+
+

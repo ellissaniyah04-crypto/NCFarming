@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang=en>
+<head> 
+<link rel="stylesheet" type="text/css" href="bellstylesheet.css">
+<title> Livestock Farming in NC </title> 
+<meta charset="UTF-8"> 
+<meta name="description" content= "This is a website for people that are interested in farming livestock in North Carolina.">
+<meta name= "keywords" content = "cows, pigs, chicken, farmers, nc, north carolina, farm" >
+<meta name=" author" content="Saniyah Bell"> 
+</head>
+<body>
+<header>
+<h1 style="background-image: repeating-conic-gradient(green 45deg, white 90deg, orange 200deg)"> NC Livestock Farming </h1>
+<div class="navbar">
+  <a href="file:///Users/saniyahbell/Desktop/web%20221/BellSaniyahAssignment1.html">Home</a>
+  <a href="file:///Users/saniyahbell/Desktop/web%20221/Recommendations.html">Recommendations</a>
+  <a href="file:///Users/saniyahbell/Desktop/web%20221/howto.html">How - To's</a>
+  <a href="file:///Users/saniyahbell/Desktop/web%20221/contact.html?fname=&lname=&email=&County=&message=++Describe+your+question+or+issue+here.%0D%0A++">Conact Us</a>
+</div>
+<h1>Contact Us</h1>
+</header>
+<form id="contactUs">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" required><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" required><br>
+  <label for="email">Email:</label><br>
+  <input type="text" id="email" name="email" required><br>
+  <label for="county">County:</label><br>
+  <input type="text" id="county" name="County" required><br>
+  <p> Description </p> 
+  <textarea name="message" rows="20" cols="60">
+  Describe your question or issue here.
+  </textarea><br>
+  <button type="submit">Submit</button>
+</form>
+ <div id="thankYouMessage" style="display: none;">
+        <h2>Thank you for your submission!</h2>
+        <p>We appreciate you contacting us.</p>
+    </div>
+ <script>
+   document.addEventListener('DOMContentLoaded', function() {
+        const myForm = document.getElementById('contactUs');
+        const thankYouMessage = document.getElementById('thankYouMessage');
+
+        contactUs.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // In a real application, you would send the form data here,
+            // for example, using fetch or XMLHttpRequest.
+            console.log("Form submitted!");
+
+            contactUs.style.display = 'none'; // Hide the form
+            thankYouMessage.style.display = 'block'; // Show the thank you message
+        });
+    });
+  </script>
+<footer>
+<p> made by Saniyah Bell Web221 </p>
+</footer>
+</body>
+</html>
