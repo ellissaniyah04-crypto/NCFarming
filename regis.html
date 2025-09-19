@@ -20,10 +20,8 @@
 </div>
 <h1>Register to For Shout Outs</h1>
 </header>
-<body>
-<br> 
 <p>Do you want to get a shout out to help boost your farm on Our website? Fill out this form! </p>
-<form>
+<form id="regis">
 <fieldset name= "registration info">
 <legend>Registration Information:</legend>
 First Name:<input type="text" name="firstname"><br><br>
@@ -43,8 +41,33 @@ Your Region: <input list="Region" name="regions">
 </datalist>
 <br>
 <p> What do want people to know? </p>
-<textarea name="Farm Blurb" placeholder="I want people to know we have cows at a great price" rows="5" cols= "50"> </textarea> 
+<textarea name="Farm Blurb" placeholder="I want people to know we have cows at a great price" rows="5" cols= "50"> </textarea><br><br> 
+<button type="submit">Submit</button>
 </fieldset>
 </form>
-</body>
+<div id="thankYouMessage" style="display: none;">
+        <h2>Thank you for your submission!</h2>
+        <p>We appreciate you contacting us.</p>
+    </div>
+ <script>
+   document.addEventListener('DOMContentLoaded', function() {
+        const myForm = document.getElementById('regis');
+        const thankYouMessage = document.getElementById('thankYouMessage');
 
+        contactUs.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // In a real application, you would send the form data here,
+            // for example, using fetch or XMLHttpRequest.
+            console.log("Form submitted!");
+
+            regis.style.display = 'none'; // Hide the form
+            thankYouMessage.style.display = 'block'; // Show the thank you message
+        });
+    });
+  </script>
+<footer>
+<p> made by Saniyah Bell Web221 </p>
+</footer>
+</body>
+</html>
