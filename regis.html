@@ -24,15 +24,15 @@
 <form id="regis">
 <fieldset name= "registration info">
 <legend>Registration Information:</legend>
-First Name:<input type="text" name="firstname"><br><br>
-Last Name: <input type="text" name="lastname"><br><br>
-E-mail: <input type="email" name= "email"><br><br>
-Phone: <input type="tel" name="phone"><br><br>
+First Name:<input type="text" name="firstname" required><br><br>
+Last Name: <input type="text" name="lastname" required><br><br>
+E-mail: <input type="email" name= "email" required><br><br>
+Phone: <input type="tel" name="phone" required><br><br>
 Farm Website <input type="url" name="url"><br><br>
-Date Established: <input type="date" name="est"><br><br>
-Best Contact Time: <input type="datetime-local" name="contact"><br><br>
-Pick a color: <input type="color" name="color"><br><br>
-Your Region: <input list="Region" name="regions">
+Date Established: <input type="date" name="est" required><br><br>
+Best Contact Time: <input type="datetime-local" name="contact" required><br><br>
+Pick a color: <input type="color" name="color" required><br><br>
+Your Region: <input list="Region" name="regions" required>
 <datalist id="Region">
 <option value="East NC ">
 <option value="West NC">
@@ -54,7 +54,7 @@ Your Region: <input list="Region" name="regions">
         const myForm = document.getElementById('regis');
         const thankYouMessage = document.getElementById('thankYouMessage');
 
-        contactUs.addEventListener('submit', function(event) {
+        regis.addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent default form submission
 
             // In a real application, you would send the form data here,
